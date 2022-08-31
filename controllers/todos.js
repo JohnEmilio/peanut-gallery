@@ -11,15 +11,6 @@ module.exports = {
             console.log(err)
         }
     },
-    createTodo: async (req, res)=>{
-        try{
-            await Todo.create({todo: req.body.todoItem, completed: false, userId: req.user.id})
-            console.log('Todo has been added!')
-            res.redirect('/todos')
-        }catch(err){
-            console.log(err)
-        }
-    },
     markComplete: async (req, res)=>{
         try{
             await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
@@ -52,4 +43,5 @@ module.exports = {
             console.log(err)
         }
     }
+    
 }    
