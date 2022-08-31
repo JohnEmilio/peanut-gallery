@@ -4,7 +4,7 @@ const reviewsController = require('../controllers/reviews')
 const { ensureAuth } = require('../middleware/auth')
 
 router.get('/', ensureAuth, reviewsController.getReviews)
-router.get('/addReview', ensureAuth, reviewsController.addReview)
+router.get('/newReview', ensureAuth, reviewsController.newReview)
 
 router.post('/createReview', reviewsController.createReview)
 

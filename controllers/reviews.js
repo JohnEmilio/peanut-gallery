@@ -1,8 +1,8 @@
 const Review = require('../models/Review')
 
 module.exports = {
-    addReview: (req,res)=>{
-        res.render('addReview.ejs')
+    newReview: (req,res)=>{
+        res.render('newReview.ejs',{})
     },
     createReview: async (req, res)=>{
         try{

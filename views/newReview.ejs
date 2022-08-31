@@ -5,14 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add a Review</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
 </head>
 <body>
+    <div>
+        <h2>Search for a movie</h2>
+        <input type="text" id="movieSearch" name="movieSearch" placeholder="Search here"/>
+        <button class="searchBtn">Find My Movie</button>    
+    </div>
     <h1>Add a Review</h1>
 
-    <h3>Movie Title:</h3>
-    <input type="text" name="title" id="title" placeholder="Movie Title Here">
+    <h3>Movie Title: <span class="movieTitle"></span></h3>
+    <img src="" alt="" class="moviePoster">
+    <div>
+        <h3>Description:</h3>
+        <p class="movieDescription"></p>
+    </div>
 
     <h3>Review:</h3>
     <textarea name="review" id="review" cols="30" rows="10" placeholder="Review goes here"></textarea>
