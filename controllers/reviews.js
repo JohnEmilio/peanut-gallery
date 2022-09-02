@@ -1,3 +1,5 @@
+const fetch = require('node-fetch')
+
 const Review = require('../models/Review')
 
 module.exports = {
@@ -31,6 +33,15 @@ module.exports = {
             res.json('Deleted It')
         }catch(err){
             console.log(err)
+        }
+    },
+    getPoster: async (req, res) => {
+        try{
+            const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${req.body.movie}`)
+            const data = await response.json()
+            res.json(data) 
+        }catch(err){
+            console.error(err)
         }
     }
     
