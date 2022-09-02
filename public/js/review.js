@@ -29,6 +29,8 @@ async function postReview(){
 
     const reviewText = document.querySelector('#review').value;
     const stars = displayRadioValue()
+    const title = document.querySelector('.movieTitle').innerText
+    const poster = document.querySelector('.moviePoster').src
 
     try{
         const response = await fetch('./createReview', {
