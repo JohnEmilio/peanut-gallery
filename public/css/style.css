@@ -372,3 +372,16 @@ h1{
     width: 100%;
 }
 
+/* allReviews Section*/
+.all-reviews {
+    display: flex;
+    justify-content: center;
+    
+}
+.each-review{
+   
+   
+
+}
+
+

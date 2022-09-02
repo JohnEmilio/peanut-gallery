@@ -10,6 +10,22 @@
 <body class="index-background">
     <section class="mainReview">
     <h1 class="reviews-title">Reviews</h1>
+    <ul class="flex">
+    <% reviews.forEach( el => { %>
+            <li class='reviewItem flex column' data-id='<%=el._id%>'>
+                <span class='title'><%= el.movie %></span>
+               <!--<img class='movieImg'><%= el.img %></img>-->
+                <span class='rating'><%= el.rating %></span>
+                <p class='review'><%= el.review %></p>
+                <button class='del button button-small'> Delete </button>
+            </li>
+    <% }) %>    
+    </ul>
+
+    <a href="/reviews/newReview"><button class="button">Add a review</button></a>
+
+    <a href="/reviews/allReviews"><button class="button">Show All Reviews</button></a>
+
     <a href="/reviews/newReview"><button class="button">Add a review</button></a>
     <a href="/logout"><button class="button">Logout</button></a>
 
