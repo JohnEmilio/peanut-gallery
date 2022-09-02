@@ -2,24 +2,6 @@ document.querySelector('#submit').addEventListener('click', postReview)
 document.querySelector('#movieSearch')
 document.querySelector('.searchBtn').addEventListener('click', getPoster)
 
-async function getMovie () {
-    const movie = document.querySelector('#movieSearch').value
-    console.log(movie)
-    try{
-        const data = await res.json()
-
-        title = data.results[0].original_title
-        overview = data.results[0].overview
-        poster = `https://image.tmdb.org/t/p/original${data.results[0].poster_path}`
-
-        console.log(data, overview)
-        document.querySelector('.movieTitle').innerText = title
-        document.querySelector('.movieDesc').innerText = overview
-        document.querySelector('.moviePoster').src = poster
-        } catch (err) {
-        console.error(err)
-    } 
-}
 
 async function getPoster(){
     const movie = document.querySelector('#movieSearch').value
@@ -36,7 +18,7 @@ async function getPoster(){
         const overview = data.results[0].overview
         const poster = data.results[0].poster_path
         document.querySelector('.movieTitle').innerText = title
-        document.querySelector('.movieDescription').innerText = overview
+        document.querySelector('.movieDesc').innerText = overview
         document.querySelector('.moviePoster').src = `https://image.tmdb.org/t/p/original${poster}`
     }catch(err){
         console.error(err)
