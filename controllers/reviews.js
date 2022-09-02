@@ -23,6 +23,15 @@ module.exports = {
             console.log(err)
         }
     },
+    allReviews: async (req,res)=>{
+        console.log(req.user)
+        try{
+            const reviewItems = await Review.find()
+            res.render('allReviews.ejs', {reviews: reviewItems})
+        }catch(err){
+            console.log(err)
+        }
+    },
     deleteReview: async (req, res)=>{
         console.log(req.body.reviewIdFromJSFile)
         try{
