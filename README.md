@@ -8,7 +8,7 @@ Welcome to the Peanut Gallery! This is a movie review site for the people who ha
 
 **Tech used:** HTML, CSS, JavaScript
 
-We used Express to hadle the server, as well as EJS for the templating language.  We included the node-fetch library so we could process our external API requests in the backend, to make sure the API keys stayed hidden. We use dotenv to protect our secret files, passport.js with the local strategy to implement authentication to our webapp, as well as bcrypt to encrypt the passwords. The database being used is MongoDB using Mongoose and it's ability to use Schemas.  
+We used Express to handle the server, as well as EJS for the templating language.  We included the node-fetch library so we could process our external API requests in the backend, to make sure the API keys stayed hidden. We use dotenv to protect our secret files, passport.js with the local strategy to implement authentication to our webapp, as well as bcrypt to encrypt the passwords. The database being used is MongoDB using Mongoose and it's ability to use Schemas.  
 
 ## Optimizations
 
