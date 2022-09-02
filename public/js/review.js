@@ -7,7 +7,7 @@ async function getMovie () {
     const movie = document.querySelector('#movieSearch').value
     console.log(movie)
     try{
-        const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${PUT IN YOUR KEY SILLY}&query=${movie}`)     
+        const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=f7260ac812c5c37cf4740e8171f9f5a8&query=${movie}`)     
         const data = await res.json()
 
         const title = data.results[0].original_title
@@ -24,7 +24,8 @@ async function getMovie () {
 }
 
 async function postReview(){
-    const movieTitle = document.querySelector('#title').value;
+    const movieTitle = document.querySelector('#movieSearch').value;
+    const poster = document.querySelector('.moviePoster').src
     const reviewText = document.querySelector('#review').value;
     const stars = displayRadioValue()
     console.log(movieTitle, reviewText, stars)
