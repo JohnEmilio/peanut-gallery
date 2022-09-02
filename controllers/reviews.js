@@ -8,7 +8,7 @@ module.exports = {
     },
     createReview: async (req, res)=>{
         try{
-            await Review.create({review: req.body.review, movie: req.body.movie, rating: req.body.rating, userId: req.user.id})
+            await Review.create({review: req.body.review, movie: req.body.movie, rating: req.body.rating, poster: req.body.poster, userId: req.user.id})
             console.log(req.body)
             console.log('Review has been added!')
             res.json('Added It')
