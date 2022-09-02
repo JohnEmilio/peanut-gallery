@@ -28,22 +28,31 @@ h1{
     margin: auto;
 }
 
-.container {
-
-}
-
 .moviePoster {
     width: 50%;
 }
 
 .searchContainer,
 .movieContainer,
-.reviewContainer {
+.reviewCard {
     display: flex;
     flex-direction: column;
     margin: 2rem auto;
     align-items: center;
     justify-content: center;
+}
+.searchContainer > *,
+.movieContainer > *,
+.reviewCard > * {
+    margin-top: .5rem;
+}
+
+.cardHeader {
+    font-size: 2rem;
+}
+
+.subHeader {
+    font-size: 1.5rem;
 }
 
 .starContainer {
@@ -53,9 +62,12 @@ h1{
     justify-content: center;
 }
 
+.movieDesc {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
 .rate {
-    display: flex;
-    flex-direction: row;
     width: fit-content;
     height: 46px;
     padding: 0 10px;
@@ -92,7 +104,7 @@ h1{
 }
 
 
-.flex{
+.flex {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -103,6 +115,13 @@ h1{
     flex-direction: column;
 }
 
+#review {
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    background-color: rgb(68, 66, 66,0.3);
+}
 
  
 /* Index Page 2*/
@@ -134,22 +153,6 @@ h1{
     padding: 2rem 5rem; 
 }
 
-/* .button {
-    margin: 2rem;
-    background: black;
-    border: 1px solid black;
-    color: white;
-    padding: 0.7rem 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    color: black;
-    background: white;
-    border: 1px solid black;
-} */
 
 .button {
     margin: 1rem;
@@ -207,6 +210,7 @@ h1{
 
 
 /* Reviews */
+
 .reviews-title {
     margin: 2rem;
     font-size: 40px;

@@ -20,7 +20,7 @@ async function getMovie () {
 
         console.log(data, overview)
         document.querySelector('.movieTitle').innerText = title
-        document.querySelector('.movieDescription').innerText = overview
+        document.querySelector('.movieDesc').innerText = overview
         document.querySelector('.moviePoster').src = poster
         } catch (err) {
         console.error(err)
