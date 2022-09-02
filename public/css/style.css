@@ -154,6 +154,8 @@ h1{
     line-height: 1.5rem;
     background-color: transparent;
     border: 2px solid black;
+    width: 80%;
+    height: 150px;
 }
 
 #review:focus {
@@ -222,7 +224,7 @@ h1{
     z-index: 1;
     background: #e8e8e8;
     position: relative;
-    font-weight: 1000;
+    font-weight: 600;
     font-size: 17px;
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.30);
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.50);

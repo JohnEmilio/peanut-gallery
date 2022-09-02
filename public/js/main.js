@@ -20,7 +20,7 @@ Array.from(reviewComplete).forEach((el)=>{
 async function deleteReview(){
     const reviewId = this.parentNode.dataset.id
     try{
-        const response = await fetch('./deleteReview', {
+        const response = await fetch('/reviews/deleteReview', {
             method: 'delete',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
