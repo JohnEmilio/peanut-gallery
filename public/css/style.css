@@ -159,6 +159,25 @@ h1{
  
 /* Index Page 2*/
 
+
+.profileContainer {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.profileReviewCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.profileContainer > ul > * {
+    margin: 0 1rem;
+}
+
+.profileCard {
+    padding: 20px;
+}
+
 .name {
     font-family: sans-serif;
     text-align: center;
@@ -230,7 +249,7 @@ h1{
    }
 
    .button-small{
-    padding: 10px 15px;
+    padding: 8px 10px;
    }
 
 @media (max-width: 1025px) { 
@@ -248,8 +267,9 @@ h1{
     margin: 2rem;
     font-size: 40px;
 }
-.reviews {
+.mainReview {
     text-align: center;
+    margin-top: 100px;
 }
 
 .button-reviews {

@@ -6,7 +6,6 @@ let title = ''
 let overview = ''
 let poster = ''
 
-
 async function getMovie () {
     const movie = document.querySelector('#movieSearch').value
     console.log(movie)

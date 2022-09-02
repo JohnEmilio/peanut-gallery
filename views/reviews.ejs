@@ -8,23 +8,25 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <section class="reviews">
+    <section class="mainReview">
     <h1 class="reviews-title">Reviews</h1>
-    <ul class="flex">
-    <% reviews.forEach( el => { %>
-            <li class='reviewItem flex column' data-id='<%=el._id%>'>
+    <a href="/reviews/newReview"><button class="button">Add a review</button></a>
+    <a href="/logout"><button class="button">Logout</button></a>
+
+    <div class="profileContainer">
+        <ul class="profileReviewCard">
+        <% reviews.forEach( el => { %>
+            <li class='reviewCard profileCard flex column' data-id='<%=el._id%>'>
                 <span class='title'><%= el.movie %></span>
                 <!-- <img class='movieImg'><%= el.img %></img> -->
-                <span class='rating'><%= el.rating %></span>
-                <p class='review'><%= el.review %></p>
-                <button class='del button button-small'> Delete </button>
-            </li>
-    <% }) %>    
-    </ul>
+                    <span class='rating'><%= el.rating %></span>
+                    <p class='review'><%= el.review %></p>
+                    <button class='del button button-small'> Delete </button>
+                </li>
+        <% }) %>    
+        </ul>
 
-    <a href="/reviews/newReview"><button class="button">Add a review</button></a>
-
-    <a href="/logout"><button class="button">Logout</button></a>
+    </div>
     </section>
     <script src="../js/main.js"></script>
 </body>
