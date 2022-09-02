@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Reviews</h1>
+    <section class="reviews">
+    <h1 class="reviews-title">Reviews</h1>
     <ul class="flex">
     <% reviews.forEach( el => { %>
             <li class='reviewItem flex column' data-id='<%=el._id%>'>
@@ -21,10 +22,10 @@
     <% }) %>    
     </ul>
 
-    <a href="reviews/newReview">Add a review</a>
+    <a class="button-reviews" href="reviews/newReview">Add a review</a>
 
-    <a href="/logout">Logout</a>
-
+    <a class="button-reviews" href="/logout">Logout</a>
+    </section>
     <script src="../js/main.js"></script>
 </body>
 </html>
