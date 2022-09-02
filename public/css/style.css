@@ -53,12 +53,6 @@ h1{
     justify-content: center;
 }
 
-.btn {
-    width: fit-content;
-    padding: 5px 10px;
-    margin-top: 10px;
-}
-
 .rate {
     display: flex;
     flex-direction: row;
@@ -107,5 +101,211 @@ h1{
 
 .column{
     flex-direction: column;
+}
+
+
+ 
+/* Index Page 2*/
+
+.name {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 2rem;
+    margin: 3rem 1rem;
+    margin-top: 8rem;
+    font-size: 40px;
+}
+
+.index-background {
+    background: url("/images/cinema-curtain.jpg"); 
+    background-repeat: no-repeat;
+    background-size: 2000px 1200px;
+    background-position: center;
+    background-position-y: -65px; 
+}
+
+.menu {
+    font-family: sans-serif;
+    text-align: center;
+    color: red;
+    margin: 2rem auto;
+    max-width: 750px;
+    height: 820px;
+    padding: 2rem 5rem; 
+}
+
+/* .button {
+    margin: 2rem;
+    background: black;
+    border: 1px solid black;
+    color: white;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    color: black;
+    background: white;
+    border: 1px solid black;
+} */
+
+.button {
+    margin: 1rem;
+    text-decoration: none;
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #070707;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.30);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.50);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+   }
+   
+   .button:hover {
+    color: #fafafa;
+    cursor: pointer;
+   }
+   
+   .button:hover::before {
+    width: 100%;
+   }
+
+   .button-small{
+    padding: 10px 15px;
+   }
+
+@media (max-width: 1025px) { 
+/*  
+    .index-background {
+        background-size: 2000px cover;
+    }  */
+}
+
+
+
+/* Reviews */
+.reviews-title {
+    margin: 2rem;
+    font-size: 40px;
+}
+.reviews {
+    text-align: center;
+}
+
+.button-reviews {
+    margin: 2rem;
+    text-decoration: none;
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #070707;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.30);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.50);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+.button-reviews::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+}
+   
+.button-reviews:hover {
+    color: #fafafa;
+}
+   
+.button-reviews:hover::before {
+    width: 100%;
+}
+
+
+ /* signup section */
+
+.signup {
+    margin: 2rem;
+    text-align: center;
+}
+
+
+
+   /* newReview Section*/
+
+.button-post-review {
+    margin: 2rem;
+    text-decoration: none;
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #070707;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.30);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.50);
+    transition: all 250ms;
+    overflow: hidden;
+}
+   
+.button-post-review::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+}
+   
+.button-post-review:hover {
+    color: #fafafa;
+}
+   
+.button-post-review:hover::before {
+    width: 100%;
 }
 
