@@ -18,7 +18,7 @@ async function getPoster(){
         const overview = data.results[0].overview
         const poster = data.results[0].poster_path
         document.querySelector('.movieTitle').innerText = title
-        document.querySelector('.movieDescription').innerText = overview
+        document.querySelector('.movieDesc').innerText = overview
         document.querySelector('.moviePoster').src = `https://image.tmdb.org/t/p/original${poster}`
     }catch(err){
         console.error(err)
