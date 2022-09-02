@@ -24,12 +24,21 @@ h1{
 .mainContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 80%;
+    width: 90%;
     margin: auto;
+    margin-top: 100px;
 }
 
 .moviePoster {
     width: 50%;
+}
+
+.container,
+.reviewCard {
+    background: linear-gradient(-40deg, rgb(68, 66, 66, 0.3), white) ;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px black;
 }
 
 .searchContainer,
@@ -37,9 +46,10 @@ h1{
 .reviewCard {
     display: flex;
     flex-direction: column;
-    margin: 2rem auto;
+    margin: 1rem auto;
     align-items: center;
     justify-content: center;
+    width: 80%;
 }
 .searchContainer > *,
 .movieContainer > *,
@@ -53,6 +63,25 @@ h1{
 
 .subHeader {
     font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.movieTitle {
+    color: red;
+    font-weight: 600;
+}
+
+#movieSearch {
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#movieSearch:focus {
+    outline: none;
 }
 
 .starContainer {
@@ -63,8 +92,9 @@ h1{
 }
 
 .movieDesc {
-    font-size: 1.2rem;
-    line-height: 1.2rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
 }
 
 .rate {
@@ -83,12 +113,14 @@ h1{
     white-space:nowrap;
     cursor:pointer;
     font-size:30px;
-    color:#ccc;
+    color:rgb(94, 94, 94);
 }
+
 .rate:not(:checked) > label:before {
     content: '★ ';
 }
-.rate > input:checked ~ label {
+.rate > input:checked ~ label,
+.rating {
     color: #ffc700;    
 }
 .rate:not(:checked) > label:hover,
@@ -120,11 +152,37 @@ h1{
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.5rem;
-    background-color: rgb(68, 66, 66,0.3);
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+#review:focus {
+    outline: none;
 }
 
  
 /* Index Page 2*/
+
+
+.profileContainer {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.profileReviewCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.profileContainer > ul > * {
+    margin: 0 1rem;
+}
+
+.profileCard {
+    padding: 20px;
+    width: 100%;
+}
 
 .name {
     font-family: sans-serif;
@@ -197,7 +255,7 @@ h1{
    }
 
    .button-small{
-    padding: 10px 15px;
+    padding: 8px 10px;
    }
 
 @media (max-width: 1025px) { 
@@ -215,8 +273,9 @@ h1{
     margin: 2rem;
     font-size: 40px;
 }
-.reviews {
+.mainReview {
     text-align: center;
+    margin-top: 100px;
 }
 
 .button-reviews {

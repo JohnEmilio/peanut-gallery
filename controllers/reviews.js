@@ -1,3 +1,4 @@
+const fetch = require('node-fetch')
 const Review = require('../models/Review')
 
 module.exports = {
@@ -6,7 +7,12 @@ module.exports = {
     },
     createReview: async (req, res)=>{
         try{
-            await Review.create({review: req.body.review, movie: req.body.movie, rating: req.body.rating, userId: req.user.id})
+            await Review.create({
+                review: req.body.review, 
+                movie: req.body.movie, 
+                rating: req.body.rating, 
+                poster: req.body.poster, 
+                userId: req.user.id})
             console.log(req.body)
             console.log('Review has been added!')
             res.json('Added It')
@@ -40,6 +46,15 @@ module.exports = {
             res.json('Deleted It')
         }catch(err){
             console.log(err)
+        }
+    },
+    getPoster: async (req, res) => {
+        try{
+            const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${req.body.movie}`)
+            const data = await response.json()
+            res.json(data) 
+        }catch(err){
+            console.error(err)
         }
     }
     

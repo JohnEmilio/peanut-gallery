@@ -15,7 +15,7 @@
             <div class="searchContainer">
                 <h2 class="cardHeader">Search for a movie</h2>
                 <input type="text" id="movieSearch" name="movieSearch" placeholder="Search here"/>
-                <button class="searchBtn button">Find My Movie</button>
+                <button class="searchBtn button button-small">Find My Movie</button>
             </div>
             <div class="movieContainer"> 
                 <h3 class="cardHeader">Movie Title: <span class="movieTitle"></span></h3>
@@ -29,22 +29,26 @@
         
         <div class="reviewCard">
             <h3 class="cardHeader">Review:</h3>
-            <textarea name="review" id="review" cols="40" rows="10" placeholder="Review goes here"></textarea>
+            <textarea name="review" id="review" cols="40" rows="8" placeholder="Review goes here"></textarea>
             <div class="starContainer">
                 <h3>Rating out of 5:</h3>
     
                 <div class="rate">
-                    <label for="star1" title="text">1 star</label>
                     <input type="radio" id="star1" name="rate" value="1" />
-                    <label for="star2" title="text">2 stars</label>
+                    <label for="star1" title="text">1 star</label>
                     <input type="radio" id="star2" name="rate" value="2" />
-                    <label for="star3" title="text">3 stars</label>
+                    <label for="star2" title="text">2 stars</label>
                     <input type="radio" id="star3" name="rate" value="3" />
-                    <label for="star4" title="text">4 stars</label>
+                    <label for="star3" title="text">3 stars</label>
                     <input type="radio" id="star4" name="rate" value="4" />
-                    <label for="star5" title="text">5 stars</label>
+                    <label for="star4" title="text">4 stars</label>
                     <input type="radio" id="star5" name="rate" value="5" />
-                </div>
+                    <label for="star5" title="text">5 stars</label>
+
+
+
+
+                  </div>
             </div>
 
             <button class="btn button" id="submit">Post Review</button>
