@@ -63,6 +63,7 @@ h1{
 
 .subHeader {
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .movieTitle {
@@ -91,8 +92,9 @@ h1{
 }
 
 .movieDesc {
-    font-size: 1.2rem;
-    line-height: 1.2rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
 }
 
 .rate {
@@ -170,6 +172,7 @@ h1{
 .profileReviewCard {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
 }
 
 .profileContainer > ul > * {
@@ -178,11 +181,9 @@ h1{
 
 .profileCard {
     padding: 20px;
+    width: 100%;
 }
 
-.rating {
-    content: '★ ';
-}
 .name {
     font-family: sans-serif;
     text-align: center;

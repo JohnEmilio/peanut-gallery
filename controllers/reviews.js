@@ -11,8 +11,8 @@ module.exports = {
                 review: req.body.review, 
                 movie: req.body.movie, 
                 rating: req.body.rating, 
-                userId: req.user.id
-            })
+                poster: req.body.poster, 
+                userId: req.user.id})
             console.log(req.body)
             console.log('Review has been added!')
             res.json('Added It')

@@ -18,9 +18,9 @@
         <% reviews.forEach( el => { %>
             <li class='reviewCard profileCard flex column' data-id='<%=el._id%>'>
                 <h1 class='movieTitle cardHeader'><%= el.movie %></h1>
-                    <img src="<%= el.poster %>" class='movieImg'></img>
+                    <img src="<%= el.poster %>" class='moviePoster'/>
                     <span class='rating'><%= el.rating %></span>
-                    <p class='movieDesc'><h3 class="subHeader">Review:</h3><br><%= el.review %></p>
+                    <p class='movieDesc'><strong>Review:</strong><br><%= el.review %></p>
                     <button class='del button button-small'> Delete </button>
                 </li>
         <% }) %>    
