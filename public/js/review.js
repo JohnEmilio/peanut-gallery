@@ -36,13 +36,14 @@ async function postReview(){
             body: JSON.stringify({
                 'review': reviewText,
                 'movie': movieTitle,
+                'poster': poster,
                 'rating': stars
             })
         })
         // console.log(response)
         const data = await response.json()
         console.log(data)
-        location.replace('./')
+        location.replace('../')
     }catch(err){
         console.log(err)
     }
