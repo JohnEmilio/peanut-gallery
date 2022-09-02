@@ -20,7 +20,17 @@
             <li class='reviewCard profileCard flex column' data-id='<%=el._id%>'>
                 <h1 class='movieTitle cardHeader'><%= el.movie %></h1>
                     <img src="<%= el.poster %>" class='moviePoster'/>
-                    <span class='rating'><%= el.rating %></span>
+                                        <% if(el.rating===1) { %>
+                                            <div class="star">★</div>
+                                            <% } else if (el.rating===2){ %>
+                                                <div class="star">★★</div>
+                                                <% } else if (el.rating===3){ %>
+                                                    <div class="star">★★★</div>
+                                                    <% } else if (el.rating===4){ %>
+                                                        <div class="star">★★★★</div>
+                                                        <% } else if (el.rating===5){ %>
+                                                            <div class="star">★★★★★</div>
+                                                            <% } %>
                     <p class='movieDesc'><strong>Review:</strong><br><%= el.review %></p>
                     <button class='del button button-small'>Delete</button>
                 </li>

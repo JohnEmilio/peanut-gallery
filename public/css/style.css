@@ -135,6 +135,11 @@ h1{
     color: #c59b08;
 }
 
+.star {
+    color: #ffc700;
+    font-size: 35px;
+}
+
 
 .flex {
     display: flex;
@@ -173,7 +178,7 @@ h1{
 
 .profileReviewCard {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 40px;
 }
 
@@ -198,7 +203,7 @@ h1{
 .index-background {
     background: url("/images/cinema-curtain.jpg"); 
     background-repeat: no-repeat;
-    background-size: 2000px 1200px;
+    background-size: cover;
     background-position: center;
     background-position-y: -65px; 
 }
