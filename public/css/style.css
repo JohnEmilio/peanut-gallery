@@ -14,8 +14,55 @@ h1{
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
+/*
+   Review page
+*/
+
+.mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+}
+
+.container {
+
+}
+
+.moviePoster {
+    width: 50%;
+}
+
+.searchContainer,
+.movieContainer,
+.reviewContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.starContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: fit-content;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
 .rate {
-    float: left;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
     height: 46px;
     padding: 0 10px;
 }
@@ -62,6 +109,3 @@ h1{
     flex-direction: column;
 }
 
-.moviePoster {
-    width: 20%;
-}
