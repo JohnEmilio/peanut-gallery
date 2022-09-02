@@ -1,17 +1,11 @@
 document.querySelector('#submit').addEventListener('click', postReview)
 document.querySelector('#movieSearch')
-document.querySelector('.searchBtn').addEventListener('click', getMovie)
-
-let title = ''
-let overview = ''
-let poster = ''
-
+document.querySelector('.searchBtn').addEventListener('click', getPoster)
 
 async function getMovie () {
     const movie = document.querySelector('#movieSearch').value
     console.log(movie)
     try{
-        const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=f7260ac812c5c37cf4740e8171f9f5a8&query=${movie}`)
         const data = await res.json()
 
         title = data.results[0].original_title
@@ -25,6 +19,28 @@ async function getMovie () {
         } catch (err) {
         console.error(err)
     } 
+}
+
+async function getPoster(){
+    const movie = document.querySelector('#movieSearch').value
+    try{
+        const res = await fetch('./getPoster', {
+            method: 'put',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                'movie': movie,
+            })
+        })
+        const data = await res.json()
+        const title = data.results[0].original_title
+        const overview = data.results[0].overview
+        const poster = data.results[0].poster_path
+        document.querySelector('.movieTitle').innerText = title
+        document.querySelector('.movieDescription').innerText = overview
+        document.querySelector('.moviePoster').src = `https://image.tmdb.org/t/p/original${poster}`
+    }catch(err){
+        console.error(err)
+    }
 }
 
 async function postReview(){
