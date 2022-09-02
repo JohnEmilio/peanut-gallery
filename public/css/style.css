@@ -67,7 +67,7 @@ h1{
 
 .movieTitle {
     color: red;
-    text-shadow: -1px -1px 10px rgb(37 42 70 / 41%);
+    font-weight: 600;
 }
 
 #movieSearch {
@@ -113,10 +113,12 @@ h1{
     font-size:30px;
     color:rgb(94, 94, 94);
 }
+
 .rate:not(:checked) > label:before {
     content: '★ ';
 }
-.rate > input:checked ~ label {
+.rate > input:checked ~ label,
+.rating {
     color: #ffc700;    
 }
 .rate:not(:checked) > label:hover,
@@ -178,6 +180,9 @@ h1{
     padding: 20px;
 }
 
+.rating {
+    content: '★ ';
+}
 .name {
     font-family: sans-serif;
     text-align: center;

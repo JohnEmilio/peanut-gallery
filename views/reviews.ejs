@@ -7,7 +7,7 @@
     <title>Reviews</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="index-background">
     <section class="mainReview">
     <h1 class="reviews-title">Reviews</h1>
     <a href="/reviews/newReview"><button class="button">Add a review</button></a>
@@ -17,10 +17,10 @@
         <ul class="profileReviewCard">
         <% reviews.forEach( el => { %>
             <li class='reviewCard profileCard flex column' data-id='<%=el._id%>'>
-                <span class='title'><%= el.movie %></span>
-                <!-- <img class='movieImg'><%= el.img %></img> -->
+                <h1 class='movieTitle cardHeader'><%= el.movie %></h1>
+                    <img src="<%= el.poster %>" class='movieImg'></img>
                     <span class='rating'><%= el.rating %></span>
-                    <p class='review'><%= el.review %></p>
+                    <p class='movieDesc'><h3 class="subHeader">Review:</h3><br><%= el.review %></p>
                     <button class='del button button-small'> Delete </button>
                 </li>
         <% }) %>    
