@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Peanut Gallery</title>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav class="nav-wrapper">
+            <div class="container">
+                <a href="/" class="brand-logo">Peanut Gallery</a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <!-- <li class="button deep-purple darken-1"><a href="/api/dreams/dreamForm">Demo Form</a></li>
+                    <li class="button blue darken-1"><a href="/api/dreams">Dashboard</a></li> -->
+                    <% if(!user){%>
+                        <li class=" red darken-2"><a href="/login">Log in</a></li>
+                        <li class=" orange lighten-1"><a href="/signup">Sign Up</a></li>
+                        <%  }else{ %>
+                            <li class="blue lighten-2">Signed in as
+                                <%=user.userName %>
+                            </li>
+                            <li class=" orange lighten-1"><a href="/logout">Logout</a></li>
+                            <%  } %>
+                                <!-- <li class="button orange darken-1"><a href="">Sign Up</a></li> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-links">
+        <!-- <li><a href="/api/dreams/dreamForm">Demo Form</a></li>
+        <li><a href="/api/dreams">Dashboard</a></li> -->
+        <li><a href="/login">Login</a></li>
+        <li><a href="/signup">Sign Up</a></li>
+    </ul>
