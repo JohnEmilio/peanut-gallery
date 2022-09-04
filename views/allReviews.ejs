@@ -7,19 +7,32 @@
     <title>Reviews</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <section class="reviews">
+<body class="index-background">
+    <section class="mainReview">
     <h1 class="reviews-title">All User Reviews</h1>
-    <ul class="flex all-reviews">
-    <% reviews.forEach( el => { %>
-            <li class='each-review flex column'>
-                <span class='title'><%= el.movie %></span>
-                <!--<img class='movieImg'><%= el.img %></img>-->
-                <span class='rating'><%= el.rating %></span>
-                <p class='review'><%= el.review %></p>
-            </li>
-    <% }) %>    
-    </ul>
+    <section class="profileContainer">
+        <ul class="profileReviewCard">
+            <% reviews.forEach(el  => { %>
+                <li class='reviewCard profileCard flex column' data-id="<%=el._id%>">
+                    <h1 class='movieTitle cardHeader'><%= el.movie %></h1>
+                    <img class='moviePoster' src="<%= el.poster %>"/>
+                    <% if(el.rating === 1) { %>
+                        <div class="star">★</div>
+                    <% } else if (el.rating === 2){ %>
+                        <div class="star">★★</div>
+                    <% } else if (el.rating === 3){ %>
+                        <div class="star">★★★</div>
+                    <% } else if (el.rating === 4){ %>
+                        <div class="star">★★★★</div>
+                    <% } else if (el.rating === 5){ %>
+                        <div class="star">★★★★★</div>
+                    <% } %>
+                    <p class='movieDesc'><strong>Review:</strong><%= el.review %></p>
+                </li>
+            <% }) %>    
+        </ul>
+
+    </section>
 
     <a class="button-reviews" href="/reviews/newReview">Add a review</a>
 
