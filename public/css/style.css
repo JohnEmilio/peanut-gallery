@@ -15,7 +15,48 @@ h1{
     box-sizing: border-box;
 }
 
+/* Login */
 
+.loginTitle {
+    padding-top: 5rem;
+    text-align: center;
+}
+.login {
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.loginInput {
+    font-size: 17px;
+}
+
+.buttonLogin {
+    margin: 0.5rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: unset;
+    border-radius: 15px;
+    color: #070707;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 600;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.30);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.50);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   .buttonLogin:hover {
+    color: #fafafa;
+    cursor: pointer;
+    background: black;
+   }
+   
+   .buttonLogin:hover::before {
+    width: 100%;
+   }
 
 /*
    Review page
@@ -191,12 +232,16 @@ h1{
     width: 100%;
 }
 
+.logo {
+    padding-top: 5rem;
+    width: 250px;
+}
+
 .name {
     font-family: sans-serif;
     text-align: center;
     padding: 2rem;
-    margin: 3rem 1rem;
-    margin-top: 8rem;
+    margin: 0 1rem;
     font-size: 40px;
 }
 
@@ -205,7 +250,7 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-position-y: -65px; 
+    background-attachment: fixed; 
 }
 
 .menu {
