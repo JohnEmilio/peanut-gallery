@@ -133,7 +133,9 @@ nav .container {
     width: 50%;
 }
 
-.container,
+
+/* .container, */
+
 .reviewCard {
     background: linear-gradient(175deg, rgba(125, 125, 125, 0.607), white);
     border: 1px solid black;
@@ -277,7 +279,7 @@ nav .container {
 
 .profileContainer {
     width: 90%;
-    margin: 1rem auto;
+    margin: 1rem auto 0 auto;
 }
 
 .profileReviewCard {
