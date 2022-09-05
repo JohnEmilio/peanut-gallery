@@ -29,9 +29,10 @@
                         <li class="header-signup"><a href="/signup">Sign Up</a></li>
                         <%  }else{ %>
                             <li class="header-user">Signed in as
-                                <%=user.userName %>
+                                <%= user.userName %>
                             </li>
-                            <li class="header-dash"><a href="/reviews">Dashboard</a></li>
+                            <li class="header-dash"><a href="/reviews">See My Reviews</a></li>
+                            <li class="header-reviews"><a href="/reviews/allReviews">See All Reviews</a></li>
                             <li class="header-logout"><a href="/logout">Logout</a></li>
                             <%  } %>
                                 <!-- <li class="button orange darken-1"><a href="">Sign Up</a></li> -->

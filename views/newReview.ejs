@@ -6,6 +6,8 @@
                 <h2 class="cardHeader">Search for a movie</h2>
                 <input type="text" id="movieSearch" name="movieSearch" placeholder="Search here" />
                 <button class="searchBtn button button-small">Find My Movie</button>
+                <select name="movies" id="moviesSelection" hidden>
+                </select>
             </div>
             <div class="movieContainer">
                 <h3 class="cardHeader">Movie Title: <span class="movieTitle"></span></h3>
@@ -21,7 +23,7 @@
             <h3 class="cardHeader">Review:</h3>
             <textarea name="review" id="review" placeholder="Review goes here"></textarea>
             <div class="starContainer">
-                <h3>Rating out of 5:</h3>
+                <h3 class="subHeader">Rating out of 5:</h3>
                 <div class="rate">
                     <input type="radio" id="star5" name="rate" value="5" />
                     <label for="star5" title="text">5 stars</label>
@@ -36,7 +38,6 @@
                 </div>
             </div>
             <button class=" button" id="submit">Post Review</button>
-            <a href="/reviews/allReviews"><button class="button">Show All Reviews</button></a>
         </div>
     </main>
     <%- include("partials/footer.ejs") %>

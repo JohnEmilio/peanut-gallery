@@ -23,16 +23,31 @@ nav {
     background-color: #c30829;
 }
 
+nav li a {
+    font-weight: 600;
+}
+
+nav li a:hover {
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+
 nav .container {
     border: none
 }
 
 .header-user {
     padding-right: 15px;
+    text-transform: capitalize;
 }
 
 .header-login {
     background-color: white;
+}
+
+.header-reviews {
+    background-color: #a5011f;
 }
 
 .header-login a {
@@ -135,6 +150,7 @@ nav .container {
     align-items: center;
     justify-content: center;
     width: 80%;
+    padding: 20px;
 }
 
 .searchContainer>*,

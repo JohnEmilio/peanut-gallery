@@ -1,11 +1,9 @@
 <%- include("partials/header.ejs") %>
     <section class="reviewsPage">
         <section class="mainReview">
-            <h1 class="reviews-title">
+            <h1 class="reviews-title header-user">
                 <%= user.userName%>'s Reviews</h1>
             <a href="/reviews/newReview"><button class="button">Add a review</button></a>
-            <a href="/reviews/allReviews"><button class="button">Show All Reviews</button></a>
-
             <div class="profileContainer">
                 <ul class="profileReviewCard">
                     <% reviews.forEach( el => { %>
