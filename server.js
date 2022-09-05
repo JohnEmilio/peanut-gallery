@@ -14,7 +14,7 @@ const reviewRoutes = require('./routes/reviews')
 
 
 // Links the environment file to be used
-require('dotenv').config({path: './config/.env'})
+require('dotenv').config({ path: './config/.env' })
 
 // Passport config
 require('./config/passport')(passport)
@@ -24,32 +24,38 @@ connectDB()
 
 //Sets the path to the view folder, sets the filesize to ejs
 app.set('view engine', 'ejs')
-//Sets the static folder to public
+    //Sets the static folder to public
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(logger('dev'))
-// Sessions
+    // Sessions
 app.use(
     session({
-      secret: 'keyboard cat',
-      resave: false,
-      saveUninitialized: false,
-      store: new MongoStore({ mongooseConnection: mongoose.connection }),
+        secret: 'keyboard cat',
+        resave: false,
+        saveUninitialized: false,
+        store: new MongoStore({ mongooseConnection: mongoose.connection }),
     })
-  )
-  
+)
+
 // Passport middleware
 app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(flash())
-  
+
+//SET GLOBAL VARIABLE
+app.use(function(req, res, next) {
+    res.locals.user = req.user || null
+    next()
+})
+
 app.use('/', mainRoutes)
-// app.use('/todos', todoRoutes)
+    // app.use('/todos', todoRoutes)
 app.use('/reviews', reviewRoutes)
 
- 
-app.listen(process.env.PORT, ()=>{
+
+app.listen(process.env.PORT, () => {
     console.log('Server is running, you better catch it!')
-})    
+})

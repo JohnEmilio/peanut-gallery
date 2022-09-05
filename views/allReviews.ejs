@@ -1,44 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body class="index-background">
-    <section class="mainReview">
-    <h1 class="reviews-title">All User Reviews</h1>
-    <section class="profileContainer">
-        <a href="/reviews"><button class="button">My Reviews</button></a>
-        <a href="/reviews/newReview"><button class="button">Add a review</button></a>
-        <a href="/logout"><button class="button">Logout</button></a>
-        <ul class="profileReviewCard">
-            <% reviews.forEach(el  => { %>
-                <li class='reviewCard profileCard flex column' data-id="<%=el._id%>">
-                    <h1 class='movieTitle cardHeader'><%= el.movie %></h1>
-                    <img class='moviePoster' src="<%= el.poster %>"/>
-                    <% if(el.rating === 1) { %>
-                        <div class="star">★</div>
-                    <% } else if (el.rating === 2){ %>
-                        <div class="star">★★</div>
-                    <% } else if (el.rating === 3){ %>
-                        <div class="star">★★★</div>
-                    <% } else if (el.rating === 4){ %>
-                        <div class="star">★★★★</div>
-                    <% } else if (el.rating === 5){ %>
-                        <div class="star">★★★★★</div>
-                    <% } %>
-                    <p class='movieDesc'><strong>Review:</strong><%= el.review %></p>
-                </li>
-            <% }) %>    
-        </ul>
+<%- include("partials/header.ejs") %>
+    <div class="reviewsPage">
+        <section class="mainReview">
+            <h1 class="reviews-title">All User's Reviews</h1>
+            <section class="profileContainer">
+                <a href="/reviews"><button class="button">My Reviews</button></a>
+                <a href="/reviews/newReview"><button class="button">Add a review</button></a>
+                <ul class="profileReviewCard">
+                    <% reviews.forEach(el  => { %>
+                        <li class='reviewCard profileCard flex column' data-id="<%=el._id%>">
+                            <h1 class='movieTitle cardHeader'>
+                                <%= el.movie %>
+                            </h1>
+                            <img class='moviePoster' src="<%= el.poster %>" />
+                            <% if(el.rating === 1) { %>
+                                <div class="star">★</div>
+                                <% } else if (el.rating === 2){ %>
+                                    <div class="star">★★</div>
+                                    <% } else if (el.rating === 3){ %>
+                                        <div class="star">★★★</div>
+                                        <% } else if (el.rating === 4){ %>
+                                            <div class="star">★★★★</div>
+                                            <% } else if (el.rating === 5){ %>
+                                                <div class="star">★★★★★</div>
+                                                <% } %>
+                                                    <p class='movieDesc'><strong>Review:</strong>
+                                                        <%= el.review %>
+                                                    </p>
+                        </li>
+                        <% }) %>
+                </ul>
 
-    </section>
-
-
-    </section>
-    <script src="../js/main.js"></script>
-</body>
-</html>
+            </section>
+        </section>
+    </div>
+    <%- include("partials/footer.ejs") %>
