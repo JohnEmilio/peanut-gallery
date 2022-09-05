@@ -1,13 +1,13 @@
 document.querySelector('#submitToList').addEventListener('click', addToWatchlist)
-document.querySelector('.searchBtn').addEventListener('click', getPoster)
+document.querySelector('.searchMovie').addEventListener('click', findMovie)
 
-const deleteBtn = document.querySelectorAll('.del')
+const deleteFromList = document.querySelectorAll('.delete')
 
-Array.from(deleteBtn).forEach((el)=>{
+Array.from(deleteFromList).forEach((el)=>{
     el.addEventListener('click', deleteWatchlistItem)
 })
 
-async function getPoster(){
+async function findMovie(){
     const movie = document.querySelector('#movieSearch').value
     try{
         const res = await fetch('./reviews/getPoster', {
@@ -18,6 +18,8 @@ async function getPoster(){
             })
         })
         const data = await res.json()
+
+        
         const title = data.results[0].original_title
         const overview = data.results[0].overview
         const poster = data.results[0].poster_path
