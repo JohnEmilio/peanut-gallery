@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add a Review</title>
-    <link rel="stylesheet" href="/css/style.css">
-
-</head>
-<body>
+<%- include("partials/header.ejs") %>
     <main class="mainContainer">
 
         <div class="container">
             <div class="searchContainer">
                 <h2 class="cardHeader">Search for a movie</h2>
-                <input type="text" id="movieSearch" name="movieSearch" placeholder="Search here"/>
+                <input type="text" id="movieSearch" name="movieSearch" placeholder="Search here" />
                 <button class="searchBtn button button-small">Find My Movie</button>
+                <select name="movies" id="moviesSelection" hidden>
+                </select>
             </div>
-            <div class="movieContainer"> 
+            <div class="movieContainer">
                 <h3 class="cardHeader">Movie Title: <span class="movieTitle"></span></h3>
                 <img src="" alt="" class="moviePoster">
                 <div>
@@ -26,13 +18,12 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="reviewCard">
             <h3 class="cardHeader">Review:</h3>
             <textarea name="review" id="review" placeholder="Review goes here"></textarea>
             <div class="starContainer">
-                <h3>Rating out of 5:</h3>
-    
+                <h3 class="subHeader">Rating out of 5:</h3>
                 <div class="rate">
                     <input type="radio" id="star5" name="rate" value="5" />
                     <label for="star5" title="text">5 stars</label>
@@ -44,16 +35,9 @@
                     <label for="star2" title="text">2 stars</label>
                     <input type="radio" id="star1" name="rate" value="1" />
                     <label for="star1" title="text">1 star</label>
-                  </div>
+                </div>
             </div>
-
-            <button class="btn button" id="submit">Post Review</button>
-            <a href="/reviews/allReviews"><button class="button">Show All Reviews</button></a>
+            <button class=" button" id="submit">Post Review</button>
         </div>
     </main>
-    
-      
-    
-    <script src="../js/review.js"></script>
-</body>
-</html>
+    <%- include("partials/footer.ejs") %>
