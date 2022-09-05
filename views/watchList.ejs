@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Watch List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="mainContainer">
+        <section class="mainReview">
+        
+        <h1 class="reviews-title">Movies I Want To See:</h1>
+        <section class="profileContainer">
+            <ul class="profileReviewCard">
+                <% watchlist.forEach( el => { %>
+                <li class='reviewCard profileCard flex column' data-id='<%=el._id%>'>
+                    <span class='movieTitle cardHeader <%= el.completed === true ? 'completed' : 'not'%>'><%= el.movie %></span>
+                    <img class='moviePoster' src="<%= el.poster %>"/>
+                    <span class='del'><a class="button-small" href="/reviews/newReview"> Review </a></span>
+                    <button class='del button-small'> Remove from List</button>
+                </li>
+            <% }) %>    
+            </ul>
+      
+    </section>
+
+        <h2></h2>
+
+        <div class="container">
+            <div class="searchContainer">
+                <h2 class="cardHeader">Search:</h2>
+                <input type="text" id="movieSearch" name="movieSearch" placeholder="Search here"/>
+                <button class="searchBtn button button-small">Find My Movie</button>
+            </div>
+            <div class="movieContainer"> 
+                <h3 class="cardHeader">Movie Title: <span class="movieTitle"></span></h3>
+                <img src="" alt="" class="moviePoster">
+                <div>
+                    <h3 class="subHeader">Description:</h3>
+                    <p class="movieDesc"></p>
+                </div>
+            </div>
+            <button class="btn button" id="submitToList">add to list</button>
+        </div>
+    </main>
+
+    
+
+    <script src="js/watchlist.js"></script>
+</body>
+</html>

@@ -9,6 +9,7 @@ const logger = require('morgan')
 const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
 const reviewRoutes = require('./routes/reviews')
+const watchlistRoutes = require('./routes/watchlist')
 
 
 
@@ -52,7 +53,7 @@ app.use(function(req, res, next) {
 })
 
 app.use('/', mainRoutes)
-    // app.use('/todos', todoRoutes)
+app.use('/watchlist', watchlistRoutes)
 app.use('/reviews', reviewRoutes)
 
 

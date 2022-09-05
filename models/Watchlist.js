@@ -1,7 +1,11 @@
 const mongoose = require('mongoose')
 
-const TodoSchema = new mongoose.Schema({
-  todo: {
+const WatchlistSchema = new mongoose.Schema({
+  movie: {
+    type: String,
+    required: true,
+  },
+  poster: {
     type: String,
     required: true,
   },
@@ -16,4 +20,4 @@ const TodoSchema = new mongoose.Schema({
 })
 
 
-module.exports = mongoose.model('Todo', TodoSchema)
+module.exports = mongoose.model('Watchlist', WatchlistSchema)
