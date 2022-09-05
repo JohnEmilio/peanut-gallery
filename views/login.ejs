@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Peanut Gallery - Login</title>
 </head>
-<body>
-    <h1 class="loginTitle">Log In</h1>
+
+<body class="login-page">
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <% if (locals.messages.info) { %>
-        <% messages.info.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <form class="login" action="/login" method="POST">
-        <input class="loginInput" type="email" name="email" placeholder="Email">
-        <input class="loginInput" type="password" name="password" placeholder="Password">
-        <input class="buttonLogin" type="submit" value="Submit">
-        <span></span>
-    </form>
+            <div class="alert alert-danger">
+                <%= el.msg %>
+            </div>
+            <% }) %>
+                <% } %>
+                    <% if (locals.messages.info) { %>
+                        <% messages.info.forEach( el => { %>
+                            <div class="alert alert-danger">
+                                <%= el.msg %>
+                            </div>
+                            <% }) %>
+                                <% } %>
+                                    <div class="row ">
+                                        <div class="form-left col s5">
+                                            <div class="container">
+                                                <h2>Login</h2>
+                                                <form action="/login" method="POST">
+                                                    <label for="email">Email Address</label>
+                                                    <input type="email" name="email" placeholder="Email">
+                                                    <label for="password">Password</label>
+                                                    <input type="password" name="password" placeholder="Password">
+                                                    <input class="waves-effect waves-light btn" type="submit">
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <section class="form-right col s7">
+
+                                        </section>
+                                    </div>
 </body>
+
 </html>
