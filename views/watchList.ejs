@@ -1,39 +1,39 @@
 <%- include("partials/header.ejs") %>
 
-    <main class="mainContainer">
+    <main class="reviewsPage">
         <section class="mainReview">
-        
-        <h1>My Movie Watchlist</h1>
-        <section class="profileContainer">
-            <ul class="profileReviewCard">
-                <% watchlist.forEach( el => { %>
-                <li class='reviewCard profileCard flex column' data-id='<%=el._id%>'>
-                    <span class='movieTitle cardHeader <%= el.completed === true ? 'completed' : 'not'%>'><%= el.movie %></span>
-                    <img class='moviePoster' src="<%= el.poster %>"/>
-                    <span class='del'><a class="button-small" href="/reviews/newReview">Write a Review</a></span>
-                    <button class='delete button-small'>Remove</button>
-                </li>
-            <% }) %>    
-            </ul>
-      
-    </section>
+            <h1>My Movie Watchlist</h1>
+            <section class="profileContainer">
+                <ul class="profileReviewCard">
+                    <% watchlist.forEach( el => { %>
+                    <li class='reviewCard profileCard flex column' data-id='<%=el._id%>'>
+                        <h1 class='movieTitle cardHeader <%= el.completed === true ? 'completed' : 'not'%>'><%= el.movie %></h1>
+                        <img class='moviePoster' src="<%= el.poster %>"/>
+                        <span><a class="button-small" href="/reviews/newReview">Write a Review</a></span>
+                        <button class='delete button-small'>Remove</button>
+                    </li>
+                <% }) %>    
+                </ul>
+            </section>
 
-        <div class="container">
-            <div class="searchContainer">
-                <h2 class="cardHeader">Search:</h2>
-                <input type="text" id="movieSearch" name="movieSearch" placeholder="Search here"/>
-                <button class="searchMovie button button-small">Find My Movie</button>
-            </div>
-            <div class="movieContainer"> 
-                <h3 class="cardHeader">Movie Title: <span class="movieTitle"></span></h3>
-                <img src="" alt="" class="moviePoster">
-                <div>
-                    <h3 class="subHeader">Description:</h3>
-                    <p class="movieDesc"></p>
+            <div class="container reviewCard">
+                <div class="searchContainer">
+                    <h2 class="cardHeader">Search:</h2>
+                    <input type="text" id="movieSearch" name="movieSearch" placeholder="Search here"/>
+                    <button class="searchMovie button button-small">Find My Movie</button>
+                    <button class="button-small button" id="submitToList">Add to List</button>
                 </div>
+                <div class="movieContainer"> 
+                    <h3 class="cardHeader">Movie Title: <span class="movieTitle"></span></h3>
+                    <img src="" alt="" class="moviePoster">
+                    <div>
+                        <h3 class="subHeader">Description:</h3>
+                        <p class="movieDesc"></p>
+                    </div>
+                </div>
+                
             </div>
-            <button class="button-small button" id="submitToList">Add to List</button>
-        </div>
+        </section>
     </main>
     <%- include("partials/footer.ejs") %>
 
