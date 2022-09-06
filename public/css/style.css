@@ -532,6 +532,17 @@ nav .container {
     justify-content: center;
 }
 
+.each-review {}
+
+
+/* Edit button */
+
+.edit{
+    color: #fff;
+    float: right;
+}
+
+
 @media (max-width: 1520px) {
     .profileReviewCard {
         grid-template-columns: repeat(3, 1fr);

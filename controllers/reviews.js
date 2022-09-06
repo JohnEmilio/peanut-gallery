@@ -20,6 +20,31 @@ module.exports = {
             console.log(err)
         }
     },
+    editReview: async (req,res)=>{
+        try{
+            const reviewItem = await Review.findById(req.params.id)
+            console.log(reviewItem)
+            res.render('editReview.ejs', {review: reviewItem, user: req.user.id})
+        }catch(err){
+            console.log(err)
+        }
+    },
+    updateReview: async (req,res)=>{
+        const reviewFromJs = req.body.review
+        const stars = req.body.rating
+        console.log(stars)
+        
+        try{
+            await Review.findOneAndUpdate({_id:req.body.id},{
+                review: reviewFromJs,
+                rating: stars
+            })
+            console.log('Review Updated')
+            res.json('Review Updated')
+        }catch(err){
+            console.log(err)
+        }
+    },
     getReviews: async (req,res)=>{
         console.log(req.user)
         try{
