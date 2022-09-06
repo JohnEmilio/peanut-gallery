@@ -150,7 +150,7 @@ nav .container {
     grid-template-columns: 1fr 1fr;
     width: 90%;
     margin: auto;
-    margin-top: 100px;
+    padding-top: 100px;
 }
 
 .moviePoster {
@@ -549,7 +549,7 @@ nav .container {
 }
 
 
-/* Edit button */
+/* Edit Section */
 
 .edit{
     color: #fff;
@@ -560,6 +560,18 @@ nav .container {
     font-size: 1.5rem;
 }
 
+.title{
+    color: #FFF;
+    text-align: center;
+}
+
+#update{
+    padding: 0
+}
+
+.watchlistHeader{
+    color: #fff
+}
 
 @media (max-width: 1520px) {
     .profileReviewCard {
