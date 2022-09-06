@@ -177,6 +177,7 @@ nav .container {
     justify-content: center;
     width: 80%;
     padding: 20px;
+    position: relative;
 }
 
 .searchContainer>*,
@@ -547,14 +548,16 @@ nav .container {
     justify-content: center;
 }
 
-.each-review {}
-
 
 /* Edit button */
 
 .edit{
     color: #fff;
     float: right;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    font-size: 1.5rem;
 }
 
 
