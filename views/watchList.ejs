@@ -27,7 +27,7 @@
                             <h1 class='movieTitle cardHeader <%= el.completed === true ? 'completed' : 'not'%>'><%= el.movie %></h1>
                             <img class='moviePoster' src="<%= el.poster %>"/>
                             <span><a class="button-small" href="/reviews/newReview">Write a Review</a></span>
-                            <button class='delete button-small'>Remove</button>
+                            <button class='button delete button-small'>Remove</button>
                         </li>
                     <% }) %>    
                     </ul>

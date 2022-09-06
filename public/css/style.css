@@ -183,6 +183,7 @@ nav .container {
 .movieTitle {
     color: #fff;
     font-weight: 600;
+    text-decoration: none;
 }
 
 #movieSearch {
@@ -283,7 +284,9 @@ nav .container {
 #review:focus {
     outline: none;
 }
-
+#review::placeholder, #movieSearch::placeholder {
+    color: rgb(138, 138, 138)
+}
 
 /* Index Page 2*/
 
