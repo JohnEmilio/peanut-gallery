@@ -569,6 +569,10 @@ nav .container {
     padding: 0
 }
 
+.watchlistHeader{
+    color: #fff
+}
+
 @media (max-width: 1520px) {
     .profileReviewCard {
         grid-template-columns: repeat(3, 1fr);
