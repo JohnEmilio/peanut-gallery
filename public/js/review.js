@@ -1,8 +1,19 @@
-document.querySelector('#submit').addEventListener('click', postReview)
+if(document.querySelector('#submit')){
+    document.querySelector('#submit').addEventListener('click', postReview)
+} 
 document.querySelector('#movieSearch')
-document.querySelector('.searchBtn').addEventListener('click', getPoster)
+if(document.querySelector('.searchBtn')){
+    document.querySelector('.searchBtn').addEventListener('click', getPoster)
+}
 const movies = document.getElementById('moviesSelection')
-movies.addEventListener('change', changeMovie)
+if(movies){
+    movies.addEventListener('change', changeMovie)
+
+}
+
+if(document.querySelector('#update')){
+    document.querySelector('#update').addEventListener('click', updateReview)
+}
 
 let currentMovies = []
 let title = ''
@@ -97,6 +108,37 @@ async function postReview () {
             console.log(err)
         }
     }
+}
+
+async function updateReview () {
+    const newReview = document.querySelector('#review').value
+    const stars = Number(displayRadioValue())
+    console.log(stars)
+
+
+    const id = window.location.pathname.split("/").pop()
+
+    try {
+        const response = await fetch('../updateReview', {
+            method: 'put',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                'review': newReview,
+                'rating': stars,
+                'id': id
+            })
+        })
+        const data = await response.json()
+        console.log(data)
+        location.replace('../')
+    } catch (err) {
+        console.log(err)
+    }
+
+
+    const data = await response.json()
+    console.log(data)
+    location.replace('../../')
 }
 
 function displayRadioValue () {

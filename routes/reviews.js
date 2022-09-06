@@ -5,8 +5,10 @@ const { ensureAuth } = require('../middleware/auth')
 
 router.get('/', ensureAuth, reviewsController.getReviews)
 router.get('/newReview', ensureAuth, reviewsController.newReview)
+router.get('/editReview/:id', ensureAuth, reviewsController.editReview)
 
 router.put('/getPoster', reviewsController.getPoster)
+router.put('/updateReview', reviewsController.updateReview)
 
 router.get('/allReviews', ensureAuth, reviewsController.allReviews)
 

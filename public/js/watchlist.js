@@ -1,5 +1,7 @@
 document.querySelector('#submitToList').addEventListener('click', addToWatchlist)
-document.querySelector('.searchMovie').addEventListener('click', findMovie)
+if(document.querySelector('.searchMovie')){
+    document.querySelector('.searchMovie').addEventListener('click', findMovie)
+}
 
 const deleteFromList = document.querySelectorAll('.delete')
 
