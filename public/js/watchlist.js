@@ -39,7 +39,7 @@ async function addToWatchlist(){
     const poster = document.querySelector('.moviePoster').src
 
     try{
-        const response = await fetch('./watchlist/addToWatchlist', {
+        const response = await fetch('../watchlist/addToWatchlist', {
             method: 'post',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
@@ -57,7 +57,9 @@ async function addToWatchlist(){
 }
 
 async function deleteWatchlistItem() {
+
     const listItemId = this.parentNode.dataset.id
+    console.log(listItemId)
     try{
         const response = await fetch('./watchlist/deleteWatchlistItem', {
             method: 'delete',
