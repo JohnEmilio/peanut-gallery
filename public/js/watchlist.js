@@ -37,7 +37,7 @@ async function addToWatchlist(){
     const poster = document.querySelector('.moviePoster').src
 
     try{
-        const response = await fetch('./watchlist/addToWatchlist', {
+        const response = await fetch('../watchlist/addToWatchlist', {
             method: 'post',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({

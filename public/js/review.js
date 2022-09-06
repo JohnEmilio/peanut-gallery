@@ -1,8 +1,9 @@
-document.querySelector('#submit').addEventListener('click', postReview)
-document.querySelector('#movieSearch')
-document.querySelector('.searchBtn').addEventListener('click', getPoster)
-const movies = document.getElementById('moviesSelection')
-movies.addEventListener('change', changeMovie)
+// document.querySelector('#submit').addEventListener('click', postReview)
+// document.querySelector('#movieSearch')
+// document.querySelector('.searchBtn').addEventListener('click', getPoster)
+// const movies = document.getElementById('moviesSelection')
+// movies.addEventListener('change', changeMovie)
+document.querySelector('#addToList').addEventListener('click', addToList)
 
 let currentMovies = []
 let title = ''
@@ -105,5 +106,29 @@ function displayRadioValue () {
     for(i = 0; i < ele.length; i++) {
         if(ele[i].checked)
         return ele[i].value
+    }
+}
+
+async function addToList(){
+
+    //const title = document.querySelector('.movieTitle').innerText
+    //const poster = document.querySelector('.moviePoster').src
+    console.log("add to list called")
+
+    try{
+        const response = await fetch('./watchlist/addToWatchlist', {
+            method: 'post',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                'movie': title,
+                'poster': poster
+            })
+        })
+        console.log(response)
+        const data = await response.json()
+        console.log(data)
+        location.reload()
+    }catch(err){
+        console.log(err)
     }
 }
