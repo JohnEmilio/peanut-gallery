@@ -13,7 +13,7 @@
                                 <%= el.movie %>
                             </h1>
                             <% if(el.userId === user.id){ %>
-                                <a href="reviews/editReview/<%= el.id%>" class="fas fa-edit fa-small edit"></a>
+                                <a href="./editReview/<%= el.id%>" class="fas fa-edit fa-small edit"></a>
                             <%} %>
 
                             <img src="<%= el.poster %>" class='moviePoster' />
