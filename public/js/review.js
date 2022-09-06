@@ -15,6 +15,13 @@ if(document.querySelector('#update')){
     document.querySelector('#update').addEventListener('click', updateReview)
 }
 
+const addToWatchlist = document.querySelectorAll('#addToList')
+
+Array.from(addToWatchlist).forEach((el)=>{
+    el.addEventListener('click', addToList)
+})
+
+
 let currentMovies = []
 let title = ''
 let overview = ''
@@ -147,5 +154,28 @@ function displayRadioValue () {
     for(i = 0; i < ele.length; i++) {
         if(ele[i].checked)
         return ele[i].value
+    }
+}
+
+async function addToList(){
+    const title = this.parentNode.querySelector('.movieTitle').innerText
+    const poster = this.parentNode.querySelector('.moviePoster').src
+    console.log(title)
+
+    try{
+        const response = await fetch('../watchlist/addToWatchlist', {
+            method: 'post',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                'movie': title,
+                'poster': poster
+            })
+        })
+        console.log(response)
+        const data = await response.json()
+        console.log(data)
+        location.reload()
+    }catch(err){
+        console.log(err)
     }
 }
