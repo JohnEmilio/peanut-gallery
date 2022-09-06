@@ -90,6 +90,15 @@ nav .container {
 .signup-page {
     height: 100vh;
     background-color: #212121;
+    color: white;
+}
+
+.signup-form > input {
+    color: white;
+}
+
+.login-form > input {
+    color: white;
 }
 
 .form-left {
@@ -105,6 +114,7 @@ nav .container {
 .login-page h2,
 .signup-page h2 {
     text-align: center;
+    color: white;
 }
 
 .login-page .container,
@@ -285,7 +295,7 @@ nav .container {
 .profileReviewCard {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 40px;
+    gap: 30px;
 }
 
 .profileContainer>ul>* {
@@ -519,4 +529,28 @@ nav .container {
     justify-content: center;
 }
 
-.each-review {}
+@media (max-width: 1520px) {
+    .profileReviewCard {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .profileContainer > ul > * {
+        margin: 0 0;
+    }
+}
+
+@media (max-width: 1120px) {
+    .profileReviewCard {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+}
+
+
+@media (max-width: 720px) {
+    .profileReviewCard {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+    }
+}
