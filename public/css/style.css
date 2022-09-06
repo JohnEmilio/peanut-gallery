@@ -90,6 +90,15 @@ nav .container {
 .signup-page {
     height: 100vh;
     background-color: #212121;
+    color: white;
+}
+
+.signup-form > input {
+    color: white;
+}
+
+.login-form > input {
+    color: white;
 }
 
 .form-left {
@@ -105,6 +114,7 @@ nav .container {
 .login-page h2,
 .signup-page h2 {
     text-align: center;
+    color: white;
 }
 
 .login-page .container,

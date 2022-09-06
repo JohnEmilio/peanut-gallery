@@ -3,18 +3,6 @@
     <main class="reviewsPage">
         <section class="mainReview">
             <h1>My Movie Watchlist</h1>
-            <section class="profileContainer">
-                <ul class="profileReviewCard">
-                    <% watchlist.forEach( el => { %>
-                    <li class='reviewCard profileCard flex column' data-id='<%=el._id%>'>
-                        <h1 class='movieTitle cardHeader <%= el.completed === true ? 'completed' : 'not'%>'><%= el.movie %></h1>
-                        <img class='moviePoster' src="<%= el.poster %>"/>
-                        <span><a class="button-small" href="/reviews/newReview">Write a Review</a></span>
-                        <button class='delete button-small'>Remove</button>
-                    </li>
-                <% }) %>    
-                </ul>
-            </section>
 
             <div class="container reviewCard">
                 <div class="searchContainer">
@@ -31,6 +19,19 @@
                         <p class="movieDesc"></p>
                     </div>
                 </div>
+
+                <section class="profileContainer">
+                    <ul class="profileReviewCard">
+                        <% watchlist.forEach( el => { %>
+                        <li class='reviewCard profileCard flex column' data-id='<%=el._id%>'>
+                            <h1 class='movieTitle cardHeader <%= el.completed === true ? 'completed' : 'not'%>'><%= el.movie %></h1>
+                            <img class='moviePoster' src="<%= el.poster %>"/>
+                            <span><a class="button-small" href="/reviews/newReview">Write a Review</a></span>
+                            <button class='delete button-small'>Remove</button>
+                        </li>
+                    <% }) %>    
+                    </ul>
+                </section>
                 
             </div>
         </section>
