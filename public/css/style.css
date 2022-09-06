@@ -520,3 +520,11 @@ nav .container {
 }
 
 .each-review {}
+
+
+/* Edit button */
+
+.edit{
+    color: #fff;
+    float: right;
+}

@@ -12,6 +12,10 @@
                             <h1 class='movieTitle cardHeader'>
                                 <%= el.movie %>
                             </h1>
+                            <% if(el.userId === user.id){ %>
+                                <a href="./editReview/<%= el.id%>" class="fas fa-edit fa-small edit"></a>
+                            <%} %>
+
                             <img src="<%= el.poster %>" class='moviePoster' />
                             <% if(el.rating===1) { %>
                                 <div class="star">★</div>
