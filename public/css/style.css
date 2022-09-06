@@ -83,6 +83,20 @@ nav .container {
     text-decoration: underline;
 }
 
+/*   Footer    */
+
+.footerHeader {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.names {
+    font-size: 1.2em;
+}
+
+.names:hover {
+    text-decoration: underline;
+}
 
 /* Login */
 
@@ -415,6 +429,7 @@ nav .container {
     background-color: rgb(0 0 0 / 49%);
     /* Tint color */
     background-blend-mode: multiply;
+    padding-bottom: 20px;
 }
 
 .reviewsPage h1 {
