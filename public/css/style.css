@@ -369,13 +369,13 @@ nav .container {
     height: 100vh;
     background: url("../images/sitting_theater.jpg");
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center;
     position: relative;
 }
 
 .heroHeading {
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
 }
 
