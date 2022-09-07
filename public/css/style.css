@@ -32,7 +32,6 @@ nav li a:hover {
     text-decoration: underline;
 }
 
-
 nav .container {
     border: none
 }
@@ -70,8 +69,31 @@ nav .container {
     color: #000;
 }
 
-.header-dash {
+.header-dash,
+.header-dash a {
     background: #EDB230;
+    color: black
+}
+
+
+/* Side Nav */
+
+.sidenav {
+    background-color: #000;
+    color: white
+}
+
+.side-dash {
+    background: #EDB230;
+    color: black
+}
+
+.side-logout {
+    background-color: #C30829;
+}
+
+.sidenav .side-logout a {
+    color: white;
 }
 
 .completed {
@@ -82,6 +104,7 @@ nav .container {
 .not {
     text-decoration: underline;
 }
+
 
 /*   Footer    */
 
@@ -98,6 +121,7 @@ nav .container {
     text-decoration: underline;
 }
 
+
 /* Login */
 
 .login-page,
@@ -107,11 +131,11 @@ nav .container {
     color: white;
 }
 
-.signup-form > input {
+.signup-form>input {
     color: white;
 }
 
-.login-form > input {
+.login-form>input {
     color: white;
 }
 
@@ -299,9 +323,12 @@ nav .container {
 #review:focus {
     outline: none;
 }
-#review::placeholder, #movieSearch::placeholder {
+
+#review::placeholder,
+#movieSearch::placeholder {
     color: rgb(138, 138, 138)
 }
+
 
 /* Index Page 2*/
 
@@ -343,6 +370,7 @@ nav .container {
     background: url("../images/sitting_theater.jpg");
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
     position: relative;
 }
 
@@ -551,7 +579,7 @@ nav .container {
 
 /* Edit Section */
 
-.edit{
+.edit {
     color: #fff;
     float: right;
     position: absolute;
@@ -560,16 +588,16 @@ nav .container {
     font-size: 1.5rem;
 }
 
-.title{
+.title {
     color: #FFF;
     text-align: center;
 }
 
-#update{
+#update {
     padding: 0
 }
 
-.watchlistHeader{
+.watchlistHeader {
     color: #fff
 }
 
@@ -578,8 +606,7 @@ nav .container {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1rem;
     }
-
-    .profileContainer > ul > * {
+    .profileContainer>ul>* {
         margin: 0 0;
     }
 }
@@ -590,7 +617,6 @@ nav .container {
         grid-gap: 1rem;
     }
 }
-
 
 @media (max-width: 720px) {
     .profileReviewCard {
